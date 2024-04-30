@@ -17,12 +17,18 @@ Then, install the model
 wget -P ./models_new 'https://dl.fbaipublicfiles.com/mms/asr/mms1b_l1107.pt'
 ```
 
-The get a sample audio file (or record one yourself, and put it in the directory ./audio_samples)
+Then get a sample audio file (or record one yourself, call it audio.wav (16khz, please) and put it in the directory ./audio_samples)
 
 ```bash
 wget -P ./audio_samples/ 'https://datasets-server.huggingface.co/assets/google/fleurs/--/en_us/train/0/audio/audio.mp3'
 ffmpeg -y -i ./audio_samples/audio.mp3 -ar 16000 ./audio_samples/audio.wav
 ```
+
+Then run the model on the audio sample
+```bash
+python ./asr/infer/mms_infer.py --model "./mms1b_fl102.pt" --lang "eng" --audio "./audio_samples/audio.wav"
+```
+
 
 ## Links
 - [MMS 1B model](https://dl.fbaipublicfiles.com/mms/asr/mms1b_all.pt)
