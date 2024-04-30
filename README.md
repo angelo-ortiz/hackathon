@@ -10,6 +10,10 @@ Then, install the requirements for MMS
 ```bash
 cd hackathon
 conda env create -f environment.yml
+
+(you may have to also do:
+conda install conda-forge::pysoundfile
+)
 ```
 
 Then, install the MMS model
