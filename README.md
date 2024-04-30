@@ -17,7 +17,7 @@ Then, install the model
 wget -P ./models_new 'https://dl.fbaipublicfiles.com/mms/asr/mms1b_l1107.pt'
 ```
 
-The get a sample audio file
+The get a sample audio file (or record one yourself, and put it in the directory ./audio_samples)
 
 ```bash
 wget -P ./audio_samples/ 'https://datasets-server.huggingface.co/assets/google/fleurs/--/en_us/train/0/audio/audio.mp3'
