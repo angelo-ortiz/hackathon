@@ -8,6 +8,7 @@ git clone https://github.com/angelo-ortiz/hackathon.git
 ```
 Then, install the requirements
 ```bash
+cd hackaton
 conda env create -f environment.yml
 ```
 
