@@ -20,6 +20,7 @@ wget -P ./models_new 'https://dl.fbaipublicfiles.com/mms/asr/mms1b_l1107.pt'
 Then get a sample audio file (or record one yourself, call it audio.wav (16khz, please) and put it in the directory ./audio_samples)
 
 ```bash
+mkdir ./audio_samples
 wget -P ./audio_samples/ 'https://datasets-server.huggingface.co/assets/google/fleurs/--/en_us/train/0/audio/audio.mp3'
 ffmpeg -y -i ./audio_samples/audio.mp3 -ar 16000 ./audio_samples/audio.wav
 ```
