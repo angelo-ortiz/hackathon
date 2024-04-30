@@ -15,7 +15,7 @@ dependencies:
   - pandas
   - seaborn
   - numpy
-  - jupyter
+  - anaconda::jupyter
   - scikit-learn
   - pip:
       - git+https://github.com/pytorch/fairseq.git
