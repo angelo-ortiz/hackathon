@@ -7,7 +7,7 @@ First, clone this repo locally (or on the cluster.)
 cd /path/where/to/save/this/repo  # e.g. in Mac: cd /Users/myself/Documents
 git clone https://github.com/angelo-ortiz/hackathon.git
 ```
-Then, install the requirements
+Then, install the requirements for MMS
 ```bash
 cd hackathon
 conda env create -f environment.yml
@@ -26,11 +26,11 @@ Then, install the model
 wget -P ./models_new 'https://dl.fbaipublicfiles.com/mms/asr/mms1b_all.pt'
 ```
 
-Then get a sample audio file (or record one yourself, call it audio.wav (16khz, please) and put it in the directory ./audio_samples)
+Then create a sample audio file (or record one yourself, call it audio.wav (16khz, please) and put it in the directory ./audio_samples)
 ```bash
-cd 
-wget -P ./audio_samples/ 'https://datasets-server.huggingface.co/assets/google/fleurs/--/en_us/train/0/audio/audio.mp3'
-ffmpeg -y -i ./audio_samples/audio.mp3 -ar 16000 ./audio_samples/audio.wav
+mkdir ./audio_samples
+say -o audio_samples/audio "Hello, how are you?"
+sox audio_samples/audio.aiff audio_samples/audio.wav
 ```
 
 Before running the model, modify the following line in `/path/to/fairseq/examples/mms/asr/config/infer_common.yaml`.
