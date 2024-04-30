@@ -6,13 +6,13 @@ First, clone this repo locally (or on the cluster.)
 ```bash
 git clone https://github.com/angelo-ortiz/hackathon.git
 ```
-Then, install the requirements
+Then, install the requirements for MMS
 ```bash
 cd hackathon
 conda env create -f environment.yml
 ```
 
-Then, install the model
+Then, install the MMS model
 ```bash
 wget -P ./models_new 'https://dl.fbaipublicfiles.com/mms/asr/mms1b_l1107.pt'
 ```
