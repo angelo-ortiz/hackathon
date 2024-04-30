@@ -17,12 +17,11 @@ Then, install the MMS model
 wget -P ./models_new 'https://dl.fbaipublicfiles.com/mms/asr/mms1b_l1107.pt'
 ```
 
-Then get a sample audio file (or record one yourself, call it audio.wav (16khz, please) and put it in the directory ./audio_samples)
-
+Then create a sample audio file (or record one yourself, call it audio.wav (16khz, please) and put it in the directory ./audio_samples)
 ```bash
 mkdir ./audio_samples
-wget -P ./audio_samples/ 'https://datasets-server.huggingface.co/assets/google/fleurs/--/en_us/train/0/audio/audio.mp3'
-sox audio_samples/audio.mp3 audio_samples/audio.wav
+say -o audio_samples/audio "Hello, how are you?"
+sox audio_samples/audio.aiff audio_samples/audio.wav
 ```
 
 Then run the model on the audio sample
