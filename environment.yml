@@ -1,0 +1,22 @@
+name: hackathon
+channels:
+  - pytorch
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.10
+  - pip
+  - pysoundfile
+  - pytorch
+  - torchaudio
+  - tqdm
+  - joblib
+  - pandas
+  - seaborn
+  - numpy
+  - jupyter
+  - scikit-learn
+  - pip:
+      - git+https://github.com/pytorch/fairseq.git
+      - openai-whisper
