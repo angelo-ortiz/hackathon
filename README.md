@@ -11,7 +11,7 @@ Then, install the requirements for MMS
 cd hackathon
 conda env create -f environment.yml
 
-(you may have to also do:
+(if you did this before tuesday April 30, 2024 15:10, you may have to also do:
 conda install conda-forge::pysoundfile
 )
 ```
