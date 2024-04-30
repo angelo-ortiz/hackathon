@@ -22,7 +22,7 @@ Then get a sample audio file (or record one yourself, call it audio.wav (16khz, 
 ```bash
 mkdir ./audio_samples
 wget -P ./audio_samples/ 'https://datasets-server.huggingface.co/assets/google/fleurs/--/en_us/train/0/audio/audio.mp3'
-ffmpeg -y -i ./audio_samples/audio.mp3 -ar 16000 ./audio_samples/audio.wav
+sox audio_samples/audio.mp3 audio_samples/audio.wav
 ```
 
 Then run the model on the audio sample
