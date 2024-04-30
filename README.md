@@ -17,6 +17,12 @@ Then, install the model
 wget -P ./models_new 'https://dl.fbaipublicfiles.com/mms/asr/mms1b_l1107.pt'
 ```
 
+The get a sample audio file
+
+```bash
+wget -P ./audio_samples/ 'https://datasets-server.huggingface.co/assets/google/fleurs/--/en_us/train/0/audio/audio.mp3'
+ffmpeg -y -i ./audio_samples/audio.mp3 -ar 16000 ./audio_samples/audio.wav
+```
 
 ## Links
 - [MMS 1B model](https://dl.fbaipublicfiles.com/mms/asr/mms1b_all.pt)
